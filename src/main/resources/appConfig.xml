@@ -6,9 +6,14 @@
 
     <bean id="person" class="org.example.Person">
         <constructor-arg ref="dog"/>
+        <constructor-arg ref="cat"/>
     </bean>
 
     <bean id="dog" class="org.example.Dog">
         <property name="name" value="Charly"/>
+    </bean>
+
+    <bean id="cat" class="org.example.Cat">
+        <property name="name" value="Alice"/>
     </bean>
 </beans>

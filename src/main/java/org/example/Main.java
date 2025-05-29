@@ -6,9 +6,9 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Main {
     public static void main(String[] args) {
-//        ClassPathXmlApplicationContext contextXML = new ClassPathXmlApplicationContext("/appConfig.xml");
-        AnnotationConfigApplicationContext contextClass = new AnnotationConfigApplicationContext(AppConfig.class);
-        Person person = contextClass.getBean("person", Person.class);
+//        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("/appConfig.xml");
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+        Person person = context.getBean("person", Person.class);
         person.doSome();
         }
     }
